@@ -1,4 +1,7 @@
 import { Component } from "react";
+import { LabelStyle, ButtonStyle,} from "./FormAddContact.styled";
+import { Box } from 'components/theme/Box';
+
 
 export class FormAddContact extends Component {
 
@@ -23,13 +26,13 @@ onInputChange = (e) => {
   }
 
 render(){
-   
+ 
     
     return (
-        <>     
+        <Box width='400px'>     
         <form onSubmit={this.onSubmit}>
-            <label >
-                Name
+            <LabelStyle >
+               <Box as='p' display='inline'> Name </Box >
                 <input 
                     type="text"
                     name="name"
@@ -38,9 +41,9 @@ render(){
                     required
                     value={this.state.name}
                     onChange={this.onInputChange} />
-            </label>
-            <label >
-                Namber
+            </LabelStyle>
+            <LabelStyle >
+                <Box as='p'  display='inline' mr='auto' >Namber</Box>
                 <input
                     type="tel"
                     name="number"
@@ -49,9 +52,9 @@ render(){
                     required
                     value={this.state.number}
                         onChange={this.onInputChange} />
-            </label>   
-            <button type="submit" >Add new Contact</button>
+            </LabelStyle>   
+            <ButtonStyle type="submit" >Add new Contact</ButtonStyle>
         </form>
-        </>
+        </Box>
     )
 }}

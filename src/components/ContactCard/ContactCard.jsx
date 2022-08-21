@@ -1,20 +1,21 @@
 import PropTypes from 'prop-types';
-import { Box } from 'components/theme/Box';
+
 
 import { ContactItem } from "./ContactItem/ContactItem";
+import { ItemStyle } from "./ContactCard.styled";
 
 export const ContactCard = ({ contacts, onRemoveClick }) => {
   return (
     <ul>
       {contacts.map(({ id, name, number }) => (
-        <Box as="li" mb={3} key={id}>
+        <ItemStyle  key={id}  >
           <ContactItem
             id={id}
             name={name}
             number={number}
             onRemoveClick={onRemoveClick}
           />
-        </Box>
+        </ItemStyle>
       ))}
     </ul>
   );
