@@ -1,16 +1,14 @@
-
 import PropTypes from 'prop-types';
 import { Box } from 'components/theme/Box';
 
-import { ItemSpanStyle, DelButtonStyle } from "./ContactItem.styled";
-
-
+import { ItemSpanStyle, DelButtonStyle } from './ContactItem.styled';
 
 export const ContactItem = ({ id, name, number, onRemoveClick }) => {
   return (
-    <><Box display='flex'>
-      <ItemSpanStyle>{name}:</ItemSpanStyle>
-      <ItemSpanStyle>{number}</ItemSpanStyle>
+    <>
+      <Box display="flex">
+        <ItemSpanStyle>{name}:</ItemSpanStyle>
+        <ItemSpanStyle>{number}</ItemSpanStyle>
       </Box>
       <DelButtonStyle type="button" onClick={() => onRemoveClick(id)}>
         Delete

@@ -1,14 +1,13 @@
 import PropTypes from 'prop-types';
 
-
-import { ContactItem } from "./ContactItem/ContactItem";
-import { ItemStyle } from "./ContactCard.styled";
+import { ContactItem } from './ContactItem/ContactItem';
+import { ItemStyle } from './ContactCard.styled';
 
 export const ContactCard = ({ contacts, onRemoveClick }) => {
   return (
     <ul>
       {contacts.map(({ id, name, number }) => (
-        <ItemStyle  key={id}  >
+        <ItemStyle key={id}>
           <ContactItem
             id={id}
             name={name}
